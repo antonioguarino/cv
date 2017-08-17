@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Antonio Guarino</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="blog, accent, , Antonio Guarino, jekyll">
+    <meta name="author" content="">
+    
+    
+    
+    <meta name="description" content="">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="alternate" type="application/rss+xml" title="Antonio Guarino RSS" href="/feed.xml" />
+    <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+    
+    
+    <!-- Facebook Open Graph -->
+    <meta name="og:description" content="">
+    <meta name="og:title" content="Antonio Guarino">
+    <meta name="og:url" content="http://localhost:4000/projects.html">
+    <meta name="og:type" content="article">
+    
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Antonio Guarino">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="http://localhost:4000/projects.html">
+    
+        <meta name="twitter:image" content="">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar container">
+            <a id="author-name" class="alignable pull-left" href="http://localhost:4000">Antonio Guarino</a>
+            <ul class="alignable pull-right navbar-ul">
+                
+                    
+                        <li class="alignable pull-right nav-list"><a href="contact">Contact</a>
+                    
+                    
+                        </li>
+                
+                    
+                        <li class="alignable pull-right nav-list"><a href="travel">Travels & Sail</a>
+                    
+                    
+                        /
+                    
+                        </li>
+                
+                    
+                        <li class="alignable pull-right nav-list"><a href="projects">Projects</a>
+                    
+                    
+                        /
+                    
+                        </li>
+                
+                    
+                        <li class="alignable pull-right nav-list"><a href="resume">Resume</a>
+                    
+                    
+                        /
+                    
+                        </li>
+                
+                    
+                        <li class="alignable pull-right nav-list"><a href="index">About</a>
+                    
+                    
+                        /
+                    
+                        </li>
+                
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+        <hr>
+        
+            <div class="container content">
+                <link href="css/tooltip.css" rel="stylesheet" type="text/css" />
+
+<h1 id="projects">Projects</h1>
+<p><br /></p>
+<h2 id="comau-smartsix-and-mtb-scara-pickplace-task">Comau SmartSiX and MTB SCARA Pick&amp;Place task</h2>
+<p>Planning and implementation of the end-effector motion to accomplish a pick&amp;place task. The project involved two robots: a dummy one, the MTB SCARA (which has been modeled in VREP) and the real SmartSiX robot produced by COMAU Robotics. The produced software includes the following features:</p>
+<ul>
+  <li>Direct kinematics calculus;</li>
+  <li>Trajectory planning through rect, arc and trapezoidal profile;</li>
+  <li>Kinematic inversion through second order CLIK with Jacobian inverse and null projection for obstacle avoidance.</li>
+</ul>
+
+<h3 id="resources">Resources</h3>
+<ul>
+  <li><a href="https://youtu.be/pRRJB4S8dTk"><em>MTB SCARA Pick&amp;Place VREP simulation with obstacle avoidance [video]</em></a></li>
+  <li><a href="https://youtu.be/xtLvQu9UyOY"><em>COMAU SmartSiX Pick&amp;Place test [video]</em></a>
+<br /><br /></li>
+</ul>
+
+<hr />
+
+<p><br /><br /></p>
+
+<h2 id="dynamic-model-identification-for-the-comau-smartsix-robot">Dynamic model identification for the Comau SmartSiX robot</h2>
+<p>The produced software implements the dynamic model identification technique discussed in <i data-tooltip="G. Antonelli, F. Caccavale, P. Chiacchio - A systematic procedure for the identification of dynamic parameters of robot manipulators">[1]</i>. The implementation requires the minimization of the objective function showed in the referenced paper and the generation of the exciting trajectory. The obtained trajectory has been executed on the robot and starting from the motors currents it has been possible to calculate the dynamic model of the robot.</p>
+
+<h3 id="resources-1">Resources</h3>
+<ul>
+  <li><a href="https://youtu.be/f2ppnJ-DUNw"><em>Exciting trajectory for model identification [video]</em></a>
+<br /><br /></li>
+</ul>
+
+<hr />
+
+<p><br /><br /></p>
+
+<h2 id="robot-control-schemes-simulation">Robot Control schemes simulation</h2>
+<p>The produced software simulates different control schemes for an industrial manipulator in order to give the possibility to compare the control result in terms of tracking error. The supported control schemes are:</p>
+<ul>
+  <li>Independent joint control</li>
+  <li>PD with gravity compensation</li>
+  <li>Inverse dynamic (Joint Space)</li>
+  <li>Inverse dynamic (Operative Space)</li>
+</ul>
+
+<h3 id="resources-2">Resources</h3>
+<ul>
+  <li><a href="/assets/InverseDynamicJointSpace.PNG"><em>Inverse dynamic (Joint Space) simulation schematic [image]</em></a></li>
+  <li><a href="/assets/InverseDynamicOPSpace.PNG"><em>Inverse dynamic (Operative Space) simulation schematic [image]</em></a></li>
+  <li><a href="/assets/PDwithG.PNG"><em>PD with gravity compensation simulation schematic [image]</em></a></li>
+  <li><a href="/assets/TrackErrorRequiredMotorTorque.PNG"><em>Tracking error and requested motors torque - PD with gravity compensation [image]</em></a>
+<br /><br /></li>
+</ul>
+
+<hr />
+
+<p><br /><br /></p>
+
+<h2 id="perturbobserve-mppt-algorithm-implementation-for-a-photovoltaic-battery-charger">Perturb&amp;Observe MPPT algorithm implementation for a photovoltaic battery charger</h2>
+<p>A photovoltaic battery charger simulation has been implemented and the Perturb and Observe <i data-tooltip="N. Femia G. Petrone G. Spagnuolo M. Vitelli - Power Electronics and Control Techniques for Maximum Energy Harvesting in Photovoltaic Systems">[2]</i> (P&amp;O) algorithm for the Maximum Power Point Tracking (MPPT) has been set up for the proposed scenario. In particular the P&amp;O algorithm has been coded in order to be ready for FPGA deployment. The board considered for the project is the Zybo board by Xilinx.</p>
+
+<h3 id="resources-3">Resources</h3>
+<ul>
+  <li><a href="/assets/SolarBatteryCharger.PNG"><em>Solar battery charger simulation schematic - Top View [image]</em></a></li>
+  <li><a href="/assets/SimResult.png"><em>Simulation result - Power and Duty Cycle [image]</em></a>
+<br /><br /></li>
+</ul>
+
+<hr />
+
+<p><br /><br /></p>
+
+<h2 id="i-v-curve-reconstruction-algorithm-for-a-photovoltaic-string-in-non-homogeneous-conditions">I-V curve reconstruction algorithm for a photovoltaic string in non-homogeneous conditions</h2>
+<p>Getting the I-V curve of a photovoltaic (PV) field is essential to give stiffness to the underlying control techniques, estimate the energy production of the plant or to give support to fault diagnosis techniques. The implemented software allows the reconstruction of the whole curve starting from the number of pv panels in series and the working conditions (irradiance and temperature). The software has been built giving particular attention to numerical optimization as showed in <i data-tooltip="M.L. Orozco-Gutierrez, J.M. Ramirez-Scarpetta, G. Spagnuolo, C.A. Ramos-Paja - A technique for mismatched PV array simulation">[3]</i> and <i data-tooltip="Darko Veberič - LambertW function for applications in physics">[4]</i>, and code optimization for FPGA. The final software version has been synthesized, deployed and tested on Xilinx Zybo board.</p>
+
+<h3 id="resources-4">Resources</h3>
+<ul>
+  <li><a href="/assets/CompanionApp.PNG"><em>Companion test application comparing Matlab simulation results with FPGA syntesis one [image]</em></a>
+<br /><br /></li>
+</ul>
+
+<hr />
+
+<p><br /><br /></p>
+
+<h2 id="design-and-simulation-of-a-digital-voltage-mode-controller-for-a-wireless-battery-charger">Design and simulation of a digital voltage mode controller for a Wireless Battery Charger</h2>
+<p>Project goal is to design the control of a buck dc-dc converter for a wireless battery charger. The control has been designed and analyzed in analog (using the k-factor method <i data-tooltip="H. Dean Venable - The k factor method: a new mathematical tool for stability analysis and synthesis">[5]</i> ) and then it has been discretized. After the discretization the major project choices about the digital implementation have been done (minimum cpu clock requirements, minimum adc requirements, limit cycle avoidance techniques etc). The resulting design has been simulated using PSIM by powersimtech.</p>
+
+<h3 id="resources-5">Resources</h3>
+<ul>
+  <li><a href="/cv/assets/CompanionApp.PNG"><em>Top view simulation schematic and digital controller code excerpt [image]</em></a>
+<br /><br /></li>
+</ul>
+
+<hr />
+
+<p><br /><br /></p>
+
+<h2 id="inductor-current-and-voltage-acquisition-of-a-dc-dc-buck-converter">Inductor current and voltage acquisition of a DC-DC buck converter</h2>
+<p>Sensing the inductor current and voltage is a key element to understand the operating conditions of a dc-dc power converter. The project goal is to implement the data acquisition system for those two signal <i data-tooltip="M. Lodi, A. Olivieri, M. Storace - Low-cost acquisition method for on-line inductor characterization in switched power converters">[6]</i> and deploy the software on the TMS320F280x MCU produced by TI. The acquired data are postprocessed and stored on board for further analysis.</p>
+
+<h3 id="resources-6">Resources</h3>
+<ul>
+  <li><a href="/assets/LabSetup.jpg"><em>Lab Setup 1 [image]</em></a></li>
+  <li><a href="/assets/LabSetup2.jpg"><em>Lab Setup 2 [image]</em></a></li>
+  <li><a href="/assets/scope.png"><em>Oscilloscope acquisition [image]</em></a></li>
+  <li><a href="/assets/figureV_I_PHI.png"><em>Acquired and post-processed signals [image]</em></a>
+<br /><br /></li>
+</ul>
+
+<hr />
+
+<h1 id="references">References</h1>
+<ul>
+  <li>
+    <p><em>[1] G. Antonelli, F. Caccavale, P. Chiacchio - A systematic procedure for the identification of dynamic parameters of robot manipulators</em></p>
+  </li>
+  <li>
+    <p><em>[2] N. Femia G. Petrone G. Spagnuolo M. Vitelli - Power Electronics and Control Techniques for Maximum Energy Harvesting in Photovoltaic Systems</em></p>
+  </li>
+  <li>
+    <p><em>[3] M.L. Orozco-Gutierrez, J.M. Ramirez-Scarpetta, G. Spagnuolo, C.A. Ramos-Paja - A technique for mismatched PV array simulation</em></p>
+  </li>
+  <li>
+    <p><em>[4] Darko Veberič - LambertW function for applications in physics</em></p>
+  </li>
+  <li>
+    <p><em>[5] H. Dean Venable - The k factor method: a new mathematical tool for stability analysis and synthesis</em></p>
+  </li>
+  <li>
+    <p><em>[6] M. Lodi, A. Olivieri, M. Storace - Low-cost acquisition method for on-line inductor characterization in switched power converters</em></p>
+  </li>
+</ul>
+
+            </div>
+        
+    </div>
+    
+</body>
